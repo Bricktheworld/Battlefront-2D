@@ -143,7 +143,7 @@ function Tie(x,y){
     };
     this.hit = function(){
         var d = dist(this.x + this.pos.x,this.y + this.pos.y,width/2,height/2);
-        if(d <= 40){ 
+        if(d <= 40 && keyIsPressed){ 
             this.xp = this.xp - 50;
         }
     };
@@ -151,14 +151,12 @@ function Tie(x,y){
         this.xp = this.xp - 50;
     };
     this.explosion = function(){
-        
-   this.r = lerp(this.r,40,0.04);
-             }
+      
+    };
     this.show = function(){
         push();
         translate(this.pos.x + this.x,this.pos.y + this.y);
-        
-      ellipse(this.x,this.y,40,40);
+        ellipse(this.x,this.y,40,40);
         fill(255,0,0,this.ac);
         noStroke();
         ellipse(0,0,1000,1000);
@@ -169,7 +167,7 @@ function Tie(x,y){
         translate(0,0);
         fill(255,0,0,180);
         noStroke();
-        rect(40,10,this.xp,20);
+//      rect(40,10,this.xp,20);
     };
 }
 
