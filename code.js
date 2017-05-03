@@ -222,7 +222,7 @@ function draw(){
         //     ties[i].explode();
         // }
         if(ties[i].xp <= 0){
-            tities[i].explosion();
+            ties[i].explosion();
         }
         else{
             ties[i].update();
