@@ -174,7 +174,7 @@ function mousePressed(){
   //lazers right
     for(i = lazerrs.length-1; i >= 0; i--){
          
-        if (mouseIsDown === true) {
+        if (mouseIsPressed === true) {
             lazerrs[i].fire();
         }else{
             lazerrs[i].x1 = width;    
@@ -186,7 +186,7 @@ function mousePressed(){
     }
     //lazers left
      for(i = lazerls.length-1; i >= 0; i--){
-        if (mouseIsDown === true) {
+        if (mouseIsPressed === true) {
             lazerls[i].fire();
         }else{
             lazerls[i].x1 = 0;    
