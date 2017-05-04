@@ -170,8 +170,22 @@ function Tie(x,y){
         rect(40,10,this.xp,20);
     };
 }
-
-
+function mousePressed(){
+  //lazers right
+    for(i = lazerrs.length-1; i >= 0; i--){
+         
+        if (keyIsPressed === true) {
+            lazerrs[i].fire();
+        }
+    }
+    //lazers left
+     for(i = lazerls.length-1; i >= 0; i--){
+        if (mouseIsDown === true) {
+            lazerls[i].fire();
+        }else{
+        }
+    }
+}
 function setup(){
     createCanvas(windowWidth - 27, windowHeight - 30);
     for(var i = 0; i < 100; i++ ){
