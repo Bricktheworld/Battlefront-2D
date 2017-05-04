@@ -3,11 +3,11 @@ var lazerrs = [];
 var lazerls = [];
 var ties = [];
 var tieimg;
-var explodes = [];
+var explosions = [];
 function preload() {
   tieimg = loadImage("tie.png");
 }
-function Particle(x,y){
+function Explosion(x,y){
     this.pos = createVector(x,y);
     this.vel = p5.Vector.random2D();
     this.vel.mult(random(2, 10));
@@ -202,7 +202,9 @@ function draw(){
         //     ties[i].explode();
         // }
         if(ties[i].xp <= 0){
-            //ties[i].explosion();
+             explosions.push(new Explosion(ties[i].x + ties[i].pos.x,ties[i].y + ties[i].pos.y);
+            //explosions[i].update();
+            //explosions[i].show();
         }
         else{
             ties[i].update();
