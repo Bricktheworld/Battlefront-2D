@@ -3,22 +3,38 @@ var lazerrs = [];
 var lazerls = [];
 var ties = [];
 var tieimg;
-//var explosions = [];
+var explodes = [];
 function preload() {
   tieimg = loadImage("tie.png");
 }
-// function Explosion(x,y){
-//     this.pos = createVector(x,y);
-//     this.vel = p5.Vector.random2D();
-//     //this.vel.mult(random(2, 10));
-//     this.a = 100;
-//     this.update = function(){
-//         this.pos.add(this.vel); 
-//         this.a = this.a - 10;
+// // function Particle(x,y){
+// //     this.pos = createVector(x,y);
+// //     this.vel = p5.Vector.random2D();
+// //     this.vel.mult(random(2, 10));
+// //     this.update = function(){
+// //         this.pos.add(this.vel);  
+// //     };
+// //     this.show = function(){
+// //         fill(255,50,0,100);
+// //         ellipse(this.pos.x,this.pos.y,2,2);
+// //     };
+// // }Vector(width/2 - mouseX,height/2 - mouseY);
+//         mousevel.setMag(5);
+//     = crthis.vel.lerp(mousevel, 0.2);
+//      funthis.pos.add(this.vel);
+//     if(this.pos.x > width){
+//         this.pos = createVector(0, this.pos.y);
+//     }else if(this.pos.x < 0){
+//         this.pos = createVector(width, this.pos.y);
+//     }else if(this.pos.y > height){
+//         this.pos = createVector(this.pos.x, 0);
+//     }else if(this.pos.y < 0){
+//         this.pos = createVector(this.pos.x, height);
+//     }
 //     };
 //     this.show = function(){
-//         fill(255,50,0,this.a);
-//         ellipse(this.pos.x,this.pos.y,2,2);
+//         fill(255);
+//         ellipse(this.pos.x,this.pos.y,4,4);
 //     };
 // }
 //Stars
@@ -131,13 +147,16 @@ function Tie(x,y){
             this.xp = this.xp - 50;
         }
     };
-    this.explosion = function(){
-      
+    this.explode = function(){
+        this.xp = this.xp - 50;
     };
+    this.explosion = function(){
+        
+   this.r = lerp(this.r,40,0.04);
+             }
     this.show = function(){
         push();
         translate(this.pos.x + this.x,this.pos.y + this.y);
-        //ellipse(this.x,this.y,40,40);
         fill(255,0,0,this.ac);
         noStroke();
         ellipse(0,0,1000,1000);
@@ -166,7 +185,7 @@ function setup(){
 function draw(){
     background(0,255);
     if(random(1) < 0.01 && ties.length < 1){
-        ties.push(new Tie(random(-300,-100), random(-300, height + 300)));
+        ties.push(new Tie(random(-300,-100), random(-300,Lheight + 300)));
     }
     //star background
     for(var i = 0; i < stars.length; i++ ){
@@ -197,15 +216,17 @@ function draw(){
     }
     //tie fighters
     for(i = ties.length-1; i >= 0; i--){
+        // if(ties[i].hit() === true){
+        //     ties[i].explode();
+        // }
         if(ties[i].xp <= 0){
-              //explosions.push(new Explosion(ties[i].x + ties[i].pos.x,ties[i].y + ties[i].pos.y);
-              //explosions[i].update();
-              //explosions[i].show();
+            tities[i].explosion();
         }
         else{
             ties[i].update();
             ties[i].hit();
             ties[i].show();  
-        }   
+        }
+        
     }
 }
