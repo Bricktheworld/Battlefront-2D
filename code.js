@@ -174,8 +174,14 @@ function mousePressed(){
   //lazers right
     for(i = lazerrs.length-1; i >= 0; i--){
          
-        if (keyIsPressed === true) {
+        if (mouseIsDown === true) {
             lazerrs[i].fire();
+        }else{
+            lazerrs[i].x1 = width;    
+            lazerrs[i].x2 = width-20;
+            lazerrs.y1 = height;
+            lazerrs.y2 = height-30;
+            lazerrs.a = 180;
         }
     }
     //lazers left
@@ -183,6 +189,11 @@ function mousePressed(){
         if (mouseIsDown === true) {
             lazerls[i].fire();
         }else{
+            lazerls[i].x1 = 0;    
+            lazerls[i].x2 = 20;
+            lazerls[i].y1 = height;
+            lazerls[i].y2 = height-30;
+            lazerls[i].a = 180;
         }
     }
 }
