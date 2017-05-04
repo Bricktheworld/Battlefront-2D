@@ -11,11 +11,13 @@ function Explosion(x,y){
     this.pos = createVector(x,y);
     this.vel = p5.Vector.random2D();
     this.vel.mult(random(2, 10));
+    this.a = 100;
     this.update = function(){
-    this.pos.add(this.vel);  
+        this.pos.add(this.vel); 
+        this.a = this.a - 10;
     };
     this.show = function(){
-        fill(255,50,0,100);
+        fill(255,50,0,this.a);
         ellipse(this.pos.x,this.pos.y,2,2);
     };
 }
@@ -198,19 +200,15 @@ function draw(){
     }
     //tie fighters
     for(i = ties.length-1; i >= 0; i--){
-        // if(ties[i].hit() === true){
-        //     ties[i].explode();
-        // }
         if(ties[i].xp <= 0){
              explosions.push(new Explosion(ties[i].x + ties[i].pos.x,ties[i].y + ties[i].pos.y);
-            //explosions[i].update();
-            //explosions[i].show();
+              explosions[i].update();
+              explosions[i].show();
         }
         else{
             ties[i].update();
             ties[i].hit();
             ties[i].show();  
-        }
-        
+        }   
     }
 }
