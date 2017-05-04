@@ -7,20 +7,20 @@ var explosions = [];
 function preload() {
   tieimg = loadImage("tie.png");
 }
-function Explosion(x,y){
-    this.pos = createVector(x,y);
-    this.vel = p5.Vector.random2D();
-    //this.vel.mult(random(2, 10));
-    this.a = 100;
-    this.update = function(){
-        this.pos.add(this.vel); 
-        this.a = this.a - 10;
-    };
-    this.show = function(){
-        fill(255,50,0,this.a);
-        ellipse(this.pos.x,this.pos.y,2,2);
-    };
-}
+// function Explosion(x,y){
+//     this.pos = createVector(x,y);
+//     this.vel = p5.Vector.random2D();
+//     //this.vel.mult(random(2, 10));
+//     this.a = 100;
+//     this.update = function(){
+//         this.pos.add(this.vel); 
+//         this.a = this.a - 10;
+//     };
+//     this.show = function(){
+//         fill(255,50,0,this.a);
+//         ellipse(this.pos.x,this.pos.y,2,2);
+//     };
+// }
 //Stars
 function Star(x,y){
     this.pos = createVector(x,y);
