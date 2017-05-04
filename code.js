@@ -203,7 +203,7 @@ function draw(){
         if(ties[i].xp <= 0){
              explosions.push(new Explosion(ties[i].x + ties[i].pos.x,ties[i].y + ties[i].pos.y);
               //explosions[i].update();
-              explosions[i].show();
+              //explosions[i].show();
         }
         else{
             ties[i].update();
