@@ -7,36 +7,18 @@ var explodes = [];
 function preload() {
   tieimg = loadImage("tie.png");
 }
-// // function Particle(x,y){
-// //     this.pos = createVector(x,y);
-// //     this.vel = p5.Vector.random2D();
-// //     this.vel.mult(random(2, 10));
-// //     this.update = function(){
-// //         this.pos.add(this.vel);  
-// //     };
-// //     this.show = function(){
-// //         fill(255,50,0,100);
-// //         ellipse(this.pos.x,this.pos.y,2,2);
-// //     };
-// // }Vector(width/2 - mouseX,height/2 - mouseY);
-//         mousevel.setMag(5);
-//     = crthis.vel.lerp(mousevel, 0.2);
-//      funthis.pos.add(this.vel);
-//     if(this.pos.x > width){
-//         this.pos = createVector(0, this.pos.y);
-//     }else if(this.pos.x < 0){
-//         this.pos = createVector(width, this.pos.y);
-//     }else if(this.pos.y > height){
-//         this.pos = createVector(this.pos.x, 0);
-//     }else if(this.pos.y < 0){
-//         this.pos = createVector(this.pos.x, height);
-//     }
-//     };
-//     this.show = function(){
-//         fill(255);
-//         ellipse(this.pos.x,this.pos.y,4,4);
-//     };
-// }
+function Particle(x,y){
+    this.pos = createVector(x,y);
+    this.vel = p5.Vector.random2D();
+    this.vel.mult(random(2, 10));
+    this.update = function(){
+    this.pos.add(this.vel);  
+    };
+    this.show = function(){
+        fill(255,50,0,100);
+        ellipse(this.pos.x,this.pos.y,2,2);
+    };
+}
 //Stars
 function Star(x,y){
     this.pos = createVector(x,y);
