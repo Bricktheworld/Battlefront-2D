@@ -10,7 +10,7 @@ function preload() {
 function Explosion(x,y){
     this.pos = createVector(x,y);
     this.vel = p5.Vector.random2D();
-    this.vel.mult(random(2, 10));
+    //this.vel.mult(random(2, 10));
     this.a = 100;
     this.update = function(){
         this.pos.add(this.vel); 
