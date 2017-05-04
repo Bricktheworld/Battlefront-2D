@@ -156,7 +156,7 @@ function Tie(x,y){
     this.show = function(){
         push();
         translate(this.pos.x + this.x,this.pos.y + this.y);
-        ellipse(this.x,this.y,40,40);
+        //ellipse(this.x,this.y,40,40);
         fill(255,0,0,this.ac);
         noStroke();
         ellipse(0,0,1000,1000);
