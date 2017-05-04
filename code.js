@@ -127,12 +127,9 @@ function Tie(x,y){
     };
     this.hit = function(){
         var d = dist(this.x + this.pos.x,this.y + this.pos.y,width/2,height/2);
-        if(d <= 40 && keyIsPressed){ 
+        if(d <= 40){ 
             this.xp = this.xp - 50;
         }
-    };
-    this.explode = function(){
-        this.xp = this.xp - 50;
     };
     this.explosion = function(){
       
@@ -169,7 +166,7 @@ function setup(){
 function draw(){
     background(0,255);
     if(random(1) < 0.01 && ties.length < 1){
-        ties.push(new Tie(random(-300,-100), random(-300,height + 300)));
+        ties.push(new Tie(random(-300,-100), random(-300, height + 300)));
     }
     //star background
     for(var i = 0; i < stars.length; i++ ){
