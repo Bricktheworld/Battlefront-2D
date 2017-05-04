@@ -3,7 +3,7 @@ var lazerrs = [];
 var lazerls = [];
 var ties = [];
 var tieimg;
-var explosions = [];
+//var explosions = [];
 function preload() {
   tieimg = loadImage("tie.png");
 }
@@ -201,7 +201,7 @@ function draw(){
     //tie fighters
     for(i = ties.length-1; i >= 0; i--){
         if(ties[i].xp <= 0){
-             //explosions.push(new Explosion(ties[i].x + ties[i].pos.x,ties[i].y + ties[i].pos.y);
+              //explosions.push(new Explosion(ties[i].x + ties[i].pos.x,ties[i].y + ties[i].pos.y);
               //explosions[i].update();
               //explosions[i].show();
         }
