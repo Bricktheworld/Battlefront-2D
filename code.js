@@ -118,7 +118,7 @@ function Tie(x,y){
     };
     this.hit = function(){
         var d = dist(this.x + this.pos.x,this.y + this.pos.y,width/2,height/2);
-        if(d <= 40){ 
+        if(d <= 40 && keyIsPressed){ 
             this.xp = this.xp - 50;
         }
     };
