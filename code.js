@@ -200,7 +200,7 @@ function draw(){
         //     ties[i].explode();
         // }
         if(ties[i].xp <= 0){
-            ties.splice(i,1);
+            //ties.splice(i,1);
         }
         else{
             ties[i].update();
