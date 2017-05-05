@@ -170,7 +170,13 @@ function draw(){
          lazerrs[i].show();
         if (keyIsPressed === true) {
             lazerrs[i].fire();
-         }
+        }else{
+            lazerrs[i].x1 = width;    
+            lazerrs[i].x2 = width-20;
+            lazerrs[i].y1 = height;
+            lazerrs[i].y2 = height-30;
+            lazerrs[i].a = 180;
+        }
         if(lazerrs[i].x1 == width/2 + 5){
             lazerrs.splice(i,1,new LazerR());
         }
