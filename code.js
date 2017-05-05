@@ -202,7 +202,8 @@ function draw(){
             ties[i].show();  
         }
         if(ties[i].destroyed === true){
-            ties.push(new Tie(random(-300,-100), random(-300, height + 300)));
+            //ties.push(new Tie(random(-300,-100), random(-300, height + 300)));
+            ties.splice(i,1,new Tie(random(-300,-100), random(-300, height + 300)));
         }
     }
 }
