@@ -7,18 +7,18 @@ var explodes = [];
 function preload() {
   tieimg = loadImage("tie.png");
 }
-// function Particle(x,y){
-//     this.pos = createVector(x,y);
-//     this.vel = p5.Vector.random2D();
-//     this.vel.mult(random(2, 10));
-//     this.update = function(){
-//         this.pos.add(this.vel);  
-//     };
-//     this.show = function(){
-//         fill(255,50,0,100);
-//         ellipse(this.pos.x,this.pos.y,2,2);
-//     };
-// }
+function Particle(x,y){
+    this.pos = createVector(x,y);
+    this.vel = p5.Vector.random2D();
+    this.vel.mult(random(2, 10));
+    this.update = function(){
+    this.pos.add(this.vel);  
+    };
+    this.show = function(){
+          fill(255,50,0,100);
+          ellipse(this.pos.x,this.pos.y,2,2);
+    };
+}
 //Stars
 function Star(x,y){
     this.pos = createVector(x,y);
