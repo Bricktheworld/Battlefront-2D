@@ -95,7 +95,7 @@ function Tie(x,y){
     this.size = 40;
     this.ac = 0;
     this.a = 255;
-    this.angle = 0;
+    this.destroyed = false;
     this.update = function(){
         if(this.x+this.pos.x < 0 || this.x+this.pos.x > width|| this.y + this.pos.y < 0 ||this.y + this.pos.y > height){
             this.ac = 100;
@@ -107,13 +107,6 @@ function Tie(x,y){
         }
         if(random(1) < 0.04){
             this.ymove = this.ymove * -1;
-        }
-        if(this.xmove > 0){
-            this.angle += 45;
-        }else if(this.xmove < 0){
-            this.angle = 225;
-        }else{
-            this.angle = 0;
         }
         var mousevel = createVector(width/2 - mouseX,height/2 - mouseY);
         mousevel.setMag(6);
@@ -133,9 +126,8 @@ function Tie(x,y){
         this.xp = this.xp - 50;
     };
     this.explosion = function(){
-        
-   this.r = lerp(this.r,40,0.04);
-             }
+        this.destroyed = true;
+    };
     this.show = function(){
         push();
         translate(this.pos.x + this.x,this.pos.y + this.y);
@@ -200,13 +192,15 @@ function draw(){
         //     ties[i].explode();
         // }
         if(ties[i].xp <= 0){
-            ties.splice(i,1,new Tie(random(-300,-100), random(-300, height + 300)));
+            ties[i].explosion;
         }
         else{
             ties[i].update();
             ties[i].hit();
             ties[i].show();  
         }
-        
+        if(ties[i].destroyed === true){
+            ties[i].splice(i,1);
+        }
     }
 }
