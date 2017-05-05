@@ -195,7 +195,7 @@ function draw(){
     for(i = ties.length-1; i >= 0; i--){
         if(ties[i].xp <= 0){
             ties[i].explosion();
-            ties[i].destroyed = true;
+            //ties[i].destroyed = true;
         }else{
             ties[i].update();
             ties[i].hit();
