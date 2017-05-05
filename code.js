@@ -165,7 +165,7 @@ function setup(){
 function draw(){
     background(0,255);
     if(random(1) < 0.01 && ties.length < 1){
-        ties.push(new Tie(random(-300,-100), random(-300,height + 300)));
+        ties.push(new Tie(random(-300,-100), random(-300, height + 300)));
     }
     //star background
     for(var i = 0; i < stars.length; i++ ){
@@ -200,7 +200,7 @@ function draw(){
         //     ties[i].explode();
         // }
         if(ties[i].xp <= 0){
-            //ties.splice(i,1);
+            ties.splice(i,1);
         }
         else{
             ties[i].update();
