@@ -153,7 +153,6 @@ function setup(){
     lazerrs.push(new LazerR());
     lazerls.push(new LazerL());
 }
-
 function draw(){
     background(0,255);
     if(random(1) < 0.01 && ties.length < 1){
@@ -181,26 +180,29 @@ function draw(){
          lazerls[i].show();
         if (keyIsPressed === true) {
             lazerls[i].fire();
-        }
+        }else{
+            lazerls[i].x1 = 0;    
+            lazerls[i].x2 = 20;
+            lazerls[i].y1 = height;
+            lazerls[i].y2 = height-30;
+            lazerls[i].a = 180;
+        }  
         if(lazerls[i].x1 == width/2 - 5){
             lazerls.splice(i,1,new LazerL());
         }
     }
     //tie fighters
     for(i = ties.length-1; i >= 0; i--){
-        // if(ties[i].hit() === true){
-        //     ties[i].explode();
-        // }
         if(ties[i].xp <= 0){
             ties[i].explosion();
-        }
-        else{
+            ties[i].destroyed = true;
+        }else{
             ties[i].update();
             ties[i].hit();
             ties[i].show();  
         }
         if(ties[i].destroyed === true){
-            ties.splice(i,1,new Tie(random(-300,-100), random(-300, height + 300)));
+            ties.push(new Tie(random(-300,-100), random(-300, height + 300)));
         }
     }
 }
