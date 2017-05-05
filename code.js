@@ -172,13 +172,6 @@ function draw(){
         if (keyIsPressed === true) {
             lazerrs[i].fire();
          }
-//          else{
-//             lazzers[i].x1 = 0;
-//             lazzers[i].x2 = 20;
-//             lazzers[i].y1 = height;
-//             lazzers[i].y2 = height-30;
-//             lazzers[i].a = 180;
-//         }
         if(lazerrs[i].x1 == width/2 + 5){
             lazerrs.splice(i,1,new LazerR());
         }
