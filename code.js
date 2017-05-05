@@ -152,33 +152,6 @@ function Tie(x,y){
         rect(40,10,this.xp,20);
     };
 }
-function mousePressed(){
-  //lazers right
-    for(i = lazerrs.length-1; i >= 0; i--){
-         
-        if (mouseIsPressed === true) {
-            lazerrs[i].fire();
-        }else{
-            lazerrs[i].x1 = width;    
-            lazerrs[i].x2 = width-20;
-            lazerrs.y1 = height;
-            lazerrs.y2 = height-30;
-            lazerrs.a = 180;
-        }
-    }
-    //lazers left
-     for(i = lazerls.length-1; i >= 0; i--){
-        if (mouseIsPressed === true) {
-            lazerls[i].fire();
-        }else{
-            lazerls[i].x1 = 0;    
-            lazerls[i].x2 = 20;
-            lazerls[i].y1 = height;
-            lazerls[i].y2 = height-30;
-            lazerls[i].a = 180;
-        }
-    }
-}
 function setup(){
     createCanvas(windowWidth - 27, windowHeight - 30);
     for(var i = 0; i < 100; i++ ){
@@ -227,6 +200,7 @@ function draw(){
         //     ties[i].explode();
         // }
         if(ties[i].xp <= 0){
+            ties.splice(i,1);
         }
         else{
             ties[i].update();
