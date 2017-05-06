@@ -130,6 +130,11 @@ function Tie(x,y){
     };
     this.explosion = function(){
         this.destroyed = true;
+        this.pose.add(this.vele);
+        for(var i = 0; i < 80; i++){
+            fill(255,50,0,100);
+            ellipse(this.pose.x,this.pose.y,2,2);
+        }
     };
     this.show = function(){
         push();
