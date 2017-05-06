@@ -7,11 +7,10 @@ var explodes = [];
 function preload() {
   tieimg = loadImage("tie.png");
 }
-function Particle(x, y, hu, firework) {
+function Particle(x, y, firework) {
   this.pos = createVector(x, y);
   this.firework = firework;
   this.lifespan = 255;
-  this.hu = hu;
   this.acc = createVector(0, 0);
   
   if (this.firework) {
@@ -164,7 +163,7 @@ function Tie(x,y){
         translate(this.pos.x,this.pos.y);
         this.destroyed = this.destroyed - 80;
         for (var i = 0; i < 100; i++) {
-            var p = new Particle(this.x, this.y, 0, false);
+            var p = new Particle(this.x, this.y, false);
             this.particles.push(p);
          }
 //            this.x = lerp(this.x,random(-200,200),0.6);
