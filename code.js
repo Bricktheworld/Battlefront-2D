@@ -135,7 +135,7 @@ function Tie(x,y){
         this.destroyed = this.destroyed - 80;
         fill(255,50,0,100);
         noStroke();
-        ellipse(0,0,40,40);
+        ellipse(this.x,this.y,40,40);
         pop();
     };
     this.show = function(){
