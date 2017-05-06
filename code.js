@@ -164,7 +164,7 @@ function Tie(x,y){
         translate(this.pos.x,this.pos.y);
         this.destroyed = this.destroyed - 80;
         for (var i = 0; i < 100; i++) {
-            var p = new Particle(this.firework.pos.x, this.firework.pos.y, this.hu, false);
+            var p = new Particle(this.x, this.y, 0, false);
             this.particles.push(p);
          }
 //            this.x = lerp(this.x,random(-200,200),0.6);
