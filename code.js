@@ -12,7 +12,7 @@ function Particle(x,y){
     this.vel = p5.Vector.random2D();
     this.vel.mult(random(2, 10));
     this.update = function(){
-    this.pos.add(this.vel);  
+          this.pos.add(this.vel);  
     };
     this.show = function(){
           fill(255,50,0,100);
