@@ -135,6 +135,7 @@ function Tie(x,y){
     this.ac = 0;
     this.a = 255;
     this.destroyed = 300;
+    this.particles = [];
     this.update = function(){
         if(this.x+this.pos.x < 0 || this.x+this.pos.x > width|| this.y + this.pos.y < 0 ||this.y + this.pos.y > height){
             this.ac = 100;
@@ -169,12 +170,11 @@ function Tie(x,y){
         push();
         translate(this.pos.x,this.pos.y);
         this.destroyed = this.destroyed - 80;
-        for(var i = 0; i < 50; i++){
+        for(var i = 0; i < 80; i++){
 //            this.x = lerp(this.x,random(-200,200),0.6);
 //            this.y = lerp(this.y,random(-200,200),0.6);
            fill(255,50,0,100);
            noStroke();
-           ellipse(this.x,this.y,4,4);
         }
         pop();
     };
