@@ -133,9 +133,11 @@ function Tie(x,y){
         push();
         translate(this.pos.x,this.pos.y);
         this.destroyed = this.destroyed - 80;
-        fill(255,50,0,100);
-        noStroke();
-        ellipse(this.x,this.y,40,40);
+        for(var i = 0; i < 80; i++){
+           fill(255,50,0,100);
+           noStroke();
+           ellipse(this.x,this.y,40,40);
+        }
         pop();
     };
     this.show = function(){
