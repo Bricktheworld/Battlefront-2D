@@ -96,6 +96,9 @@ function Tie(x,y){
     this.ac = 0;
     this.a = 255;
     this.destroyed = false;
+    this.pose = createVector(x,y);
+    this.vele = p5.Vector.random2D();
+    this.vele.mult(random(2, 10));
     this.update = function(){
         if(this.x+this.pos.x < 0 || this.x+this.pos.x > width|| this.y + this.pos.y < 0 ||this.y + this.pos.y > height){
             this.ac = 100;
