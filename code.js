@@ -125,16 +125,10 @@ function Tie(x,y){
             this.xp = this.xp - 50;
         }
     };
-    this.explode = function(){
-        this.xp = this.xp - 50;
-    };
     this.explosion = function(){
         this.destroyed = this.destroyed - 80;
-        this.pose.add(this.vele);
-        for(var i = 0; i < 80; i++){
             fill(255,50,0,100);
-            ellipse(this.pose.x,this.pose.y,2,2);
-        }
+            ellipse(width/2,height/2,40,40);
     };
     this.show = function(){
         push();
