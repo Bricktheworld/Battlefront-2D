@@ -134,11 +134,11 @@ function Tie(x,y){
         translate(this.pos.x,this.pos.y);
         this.destroyed = this.destroyed - 80;
         for(var i = 0; i < 50; i++){
-           this.x = lerp(this.x,random(-200,200),0.02);
-           this.y = lerp(this.y,random(-200,200),0.02);
+           this.x = lerp(this.x,random(-200,200),0.6);
+           this.y = lerp(this.y,random(-200,200),0.6);
            fill(255,50,0,100);
            noStroke();
-           ellipse(this.x,this.y,40,40);
+           ellipse(this.x,this.y,4,4);
         }
         pop();
     };
