@@ -96,7 +96,7 @@ function Tie(x,y){
     this.ac = 0;
     this.a = 255;
     this.destroyed = 300;
-    this.pose = createVector(x,y);
+    //this.pose = createVector(x,y);
     this.vele = p5.Vector.random2D();
     this.vele.mult(random(2, 10));
     this.update = function(){
@@ -126,9 +126,12 @@ function Tie(x,y){
         }
     };
     this.explosion = function(){
+        push();
+        translate(this.pos.x,this.pos.y
         this.destroyed = this.destroyed - 80;
-            fill(255,50,0,100);
-            ellipse(width/2,height/2,40,40);
+        fill(255,50,0,100);
+        noStroke();
+        ellipse(0,0,40,40);
     };
     this.show = function(){
         push();
