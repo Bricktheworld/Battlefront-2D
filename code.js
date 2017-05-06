@@ -95,7 +95,7 @@ function Tie(x,y){
     this.size = 70;
     this.ac = 0;
     this.a = 255;
-    this.destroyed = false;
+    this.destroyed = 300;
     this.pose = createVector(x,y);
     this.vele = p5.Vector.random2D();
     this.vele.mult(random(2, 10));
@@ -129,7 +129,7 @@ function Tie(x,y){
         this.xp = this.xp - 50;
     };
     this.explosion = function(){
-        this.destroyed = true;
+        this.destroyed = this.destroyed - 80;
         this.pose.add(this.vele);
         for(var i = 0; i < 80; i++){
             fill(255,50,0,100);
@@ -215,7 +215,7 @@ function draw(){
             ties[i].hit();
             ties[i].show();  
         }
-        if(ties[i].destroyed === true){
+        if(ties[i].destroyed <= 0){
             //ties.push(new Tie(random(-300,-100), random(-300, height + 300)));
             ties.splice(i,1,new Tie(random(-300,-100), random(-300, height + 300)));
         }
