@@ -126,6 +126,10 @@ function Tie(x,y){
         }
     };
     this.explosion = function(){
+        var mvel = createVector(width/2 - mouseX,height/2 - mouseY);
+        mvel.setMag(6);
+        this.vel.lerp(mvel, 0.2);
+        this.pos.add(this.vel);
         push();
         translate(this.pos.x,this.pos.y);
         this.destroyed = this.destroyed - 80;
