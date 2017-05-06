@@ -92,7 +92,7 @@ function Tie(x,y){
     this.vel = createVector(0,0);
     this.xp = width - 100;
     this.r = 0;
-    this.size = 40;
+    this.size = 70;
     this.ac = 0;
     this.a = 255;
     this.destroyed = false;
@@ -118,7 +118,7 @@ function Tie(x,y){
     };
     this.hit = function(){
         var d = dist(this.x + this.pos.x,this.y + this.pos.y,width/2,height/2);
-        if(d <= 40 && keyIsPressed){ 
+        if(d <= 70 && keyIsPressed){ 
             this.xp = this.xp - 50;
         }
     };
