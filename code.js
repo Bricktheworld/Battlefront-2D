@@ -44,17 +44,10 @@ function Particle(x, y, hu, firework) {
     }
   }
 
-  this.show = function() {
-    colorMode(HSB);
+  this.show = function() {    
     
-    if (!this.firework) {
-      strokeWeight(2);
-      stroke(hu, 255, 255, this.lifespan);
-    } else {
-      strokeWeight(4);
-      stroke(hu, 255, 255);
-    }
-    
+    fill(255,50,0,100);
+    noStroke();
     point(this.pos.x, this.pos.y);
   }
 }
@@ -176,8 +169,7 @@ function Tie(x,y){
          }
 //            this.x = lerp(this.x,random(-200,200),0.6);
 //            this.y = lerp(this.y,random(-200,200),0.6);
-           fill(255,50,0,100);
-           noStroke();
+           
         pop();
     };
     this.show = function(){
