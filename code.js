@@ -127,7 +127,7 @@ function Tie(x,y){
     };
     this.explosion = function(){
         push();
-        translate(this.pos.x,this.pos.y
+        translate(this.pos.x,this.pos.y);
         this.destroyed = this.destroyed - 80;
         fill(255,50,0,100);
         noStroke();
