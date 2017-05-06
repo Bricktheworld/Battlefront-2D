@@ -165,7 +165,7 @@ function Tie(x,y){
         for (var i = 0; i < 100; i++) {
             var p = new Particle(this.x, this.y, false);
             this.particles.push(p);
-            particles[i].show();
+            this.particles[i].show();
          }
 //            this.x = lerp(this.x,random(-200,200),0.6);
 //            this.y = lerp(this.y,random(-200,200),0.6);
