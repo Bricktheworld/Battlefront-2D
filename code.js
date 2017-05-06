@@ -132,6 +132,7 @@ function Tie(x,y){
         fill(255,50,0,100);
         noStroke();
         ellipse(0,0,40,40);
+        pop();
     };
     this.show = function(){
         push();
