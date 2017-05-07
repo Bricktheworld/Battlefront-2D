@@ -261,5 +261,8 @@ function draw(){
     fill(117, 118, 119);
     rotate(45);
     rect(0,0,10,height);
+    translate(0,0);
+    rotate(315);
+    rect(0,0,10,height);
     pop();
 }
