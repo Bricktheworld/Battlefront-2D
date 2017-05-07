@@ -265,6 +265,6 @@ function draw(){
     //push();
     //translate(0,0);
     //rotate(45);
-    rect(width/2,height/2,10,height);
+    //rect(width/2,height/2,10,height);
     //pop();
 }
