@@ -259,7 +259,7 @@ function draw(){
     push();
     translate(width, 0);
     fill(117, 118, 119);
-    noStroke();
+    //noStroke();
     rotate(45);
     rect(0,0,10,height);
     pop();
