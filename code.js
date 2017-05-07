@@ -256,6 +256,9 @@ function draw(){
             destroyed = 255;
         }
     }
+    push();
+    translate(width, height);
     fill(117, 118, 119);
-    rect(width,height,10,height);
+    rect(0,0,10,height);
+    pop();
 }
