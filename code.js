@@ -257,7 +257,7 @@ function draw(){
         }
     }
     push();
-    translate(width, height);
+    translate(width/2, height/2);
     fill(117, 118, 119);
     rect(0,0,10,height);
     pop();
