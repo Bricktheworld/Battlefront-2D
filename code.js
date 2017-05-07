@@ -257,9 +257,9 @@ function draw(){
         }
     }
     push();
-    translate(width, height);
+    translate(width, 0);
     fill(117, 118, 119);
-    rotate(90);
+    rotate(45);
     rect(0,0,10,height);
     pop();
 }
