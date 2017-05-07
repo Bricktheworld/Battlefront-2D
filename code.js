@@ -255,6 +255,7 @@ function draw(){
         if(destroyed <= 0){
         //ties.push(new Tie(random(-300,-100), random(-300, height + 300)));
             ties.splice(i,1,new Tie(random(-300,-100), random(-300, height + 300)));
+            destroyed = 255;
         }
     }
 }
