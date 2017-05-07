@@ -263,9 +263,9 @@ function draw(){
     rotate(45);
     rect(0,0,10,height);
     pop();
-    push();
-    translate(width/2,height/2);
-    rotate(45);
+    //push();
+    //translate(width/2,height/2);
+    //rotate(45);
     rect(width/2,height/2,10,height);
-    pop();
+    //pop();
 }
