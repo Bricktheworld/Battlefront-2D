@@ -47,6 +47,7 @@ function Particle(x, y, firework) {
     
     fill(255,50,0,100);
     noStroke();
+    ellipse(this.pos.x, this.pos.y,40,40);
     point(this.pos.x, this.pos.y);
   }
 }
