@@ -257,5 +257,5 @@ function draw(){
         }
     }
     fill(117, 118, 119);
-    rect(width/2,height/2,10,height);
+    rect(width,height,10,height);
 }
