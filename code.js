@@ -257,6 +257,5 @@ function draw(){
         }
     }
     fill(117, 118, 119);
-    rectMode(CENTER);
-    rect(0,0,10,height);
+    rect(width/2,height/2,10,height);
 }
