@@ -126,7 +126,7 @@ function Tie(x,y){
     this.size = 70;
     this.ac = 0;
     this.a = 255;
-    this.destroyed = 300;
+    this.destroyed = 255;
     this.particles = [];
     this.update = function(){
         if(this.x+this.pos.x < 0 || this.x+this.pos.x > width|| this.y + this.pos.y < 0 ||this.y + this.pos.y > height){
@@ -161,16 +161,13 @@ function Tie(x,y){
         this.pos.add(this.vel);
         push();
         translate(this.pos.x,this.pos.y);
-        this.destroyed = this.destroyed - 80;
+        this.destroyed = this.destroyed - 4;
         for (var i = 0; i < 100; i++) {
             var p = new Particle(this.x, this.y, false);
             this.particles.push(p);
             this.particles[i].update();
             this.particles[i].show();
-         }
-//            this.x = lerp(this.x,random(-200,200),0.6);
-//            this.y = lerp(this.y,random(-200,200),0.6);
-           
+         }        
         pop();
     };
     this.show = function(){
@@ -254,7 +251,7 @@ function draw(){
         }
         if(ties[i].destroyed <= 0){
         //ties.push(new Tie(random(-300,-100), random(-300, height + 300)));
-            //ties.splice(i,1,new Tie(random(-300,-100), random(-300, height + 300)));
+            ties.splice(i,1,new Tie(random(-300,-100), random(-300, height + 300)));
         }
     }
 }
