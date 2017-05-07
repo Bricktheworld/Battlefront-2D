@@ -4,6 +4,7 @@ var lazerls = [];
 var ties = [];
 var tieimg;
 var explodes = [];
+var destroyed;
 function preload() {
   tieimg = loadImage("tie.png");
 }
@@ -194,6 +195,7 @@ function setup(){
     ties.push(new Tie(0,0));
     lazerrs.push(new LazerR());
     lazerls.push(new LazerL());
+    destroyed = 255;
 }
 function draw(){
     background(0,255);
@@ -243,13 +245,14 @@ function draw(){
     for(i = ties.length-1; i >= 0; i--){
         if(ties[i].xp <= 0){
             ties[i].explosion();
+            destroyed -= 4;
             //ties[i].destroyed = true;
         }else{
             ties[i].update();
             ties[i].hit();
             ties[i].show();  
         }
-        if(ties[i].destroyed <= 0){
+        if(destroyed <= 0){
         //ties.push(new Tie(random(-300,-100), random(-300, height + 300)));
             ties.splice(i,1,new Tie(random(-300,-100), random(-300, height + 300)));
         }
