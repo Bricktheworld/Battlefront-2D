@@ -264,7 +264,7 @@ function draw(){
     pop();
     push();
     translate(0,0);
-    rotate(45);
+    //rotate(45);
     rect(0,0,10,height);
     pop();
 }
