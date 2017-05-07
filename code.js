@@ -127,7 +127,6 @@ function Tie(x,y){
     this.size = 70;
     this.ac = 0;
     this.a = 255;
-    this.destroyed = 255;
     this.particles = [];
     this.update = function(){
         if(this.x+this.pos.x < 0 || this.x+this.pos.x > width|| this.y + this.pos.y < 0 ||this.y + this.pos.y > height){
@@ -162,13 +161,12 @@ function Tie(x,y){
         this.pos.add(this.vel);
         push();
         translate(this.pos.x,this.pos.y);
-        this.destroyed = this.destroyed - 4;
-        for (var i = 0; i < 100; i++) {
+        for(var i = 0; i < 100; i++){
             var p = new Particle(this.x, this.y, false);
             this.particles.push(p);
             this.particles[i].update();
             this.particles[i].show();
-         }        
+        }        
         pop();
     };
     this.show = function(){
