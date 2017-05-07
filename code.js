@@ -45,10 +45,9 @@ function Particle(x, y, firework) {
 
   this.show = function() {    
     
-    fill(255,50,0,100);
+    fill(255,50,0,this.lifespan);
     noStroke();
     ellipse(this.pos.x, this.pos.y,40,40);
-    point(this.pos.x, this.pos.y);
   }
 }
 //Stars
