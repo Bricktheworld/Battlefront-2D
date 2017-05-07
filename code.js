@@ -256,10 +256,7 @@ function draw(){
             destroyed = 255;
         }
     }
-    push();
-    translate(width+180, height/2);
     fill(117, 118, 119);
     rectMode(CENTER);
     rect(0,0,10,height);
-    pop();
 }
