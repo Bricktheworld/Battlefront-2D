@@ -262,6 +262,8 @@ function draw(){
     noStroke();
     rotate(45);
     rect(0,0,10,height);
+    pop();
+    push();
     translate(0,0);
     rotate(315);
     rect(0,0,10,height);
