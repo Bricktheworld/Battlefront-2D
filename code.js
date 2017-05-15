@@ -256,14 +256,8 @@ function draw(){
             destroyed = 255;
         }
     }
-    push();
-    translate(width, 0);
-    fill(117, 118, 119);
-    noStroke();
-    rotate(45);
-    rect(0,0,10,height);
-    translate(width/2,height/2);
-    //rotate(45);
-    rect(0,0,10,height);
-    pop();
+    stroke(132, 132, 132);
+    strokeWeight(20);
+    line(0,0,width/2-20, height/2);
+    line(width,0,width/2 + 20,height/2);
 }
