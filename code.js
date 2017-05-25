@@ -258,8 +258,8 @@ function draw(){
     }
     stroke(132, 132, 132);
     strokeWeight(15);
-    line(0,0,width/2 - 20, height/2+40);
-    line(width,0,width/2 + 20,height/2+40);
+    line(0,0,width/2 - 70, height/2+80);
+    line(width,0,width/2 + 70,height/2+80);
     fill(132, 132, 132);
-    triangle(0,height,width/2-20,height/2+40, width/2-20,height);
+    triangle(0,height-40,width/2-70,height/2+80, width/2-70,height);
 }
